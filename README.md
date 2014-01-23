@@ -1,8 +1,14 @@
-# Intro to RSpec
+# Intro to Testing
+
+The purpose of this repository is to mimic a simple real-world object that many people are familiar with (a calculator) so you can learn how to write unit tests.
+
+Currently this repo covers Ruby and testing with RSpec; more to follow.
+
+## Intro to RSpec
 
 This is a simple Ruby calculator that has addition, subtraction, and multiplication calculating functionalities. It also allows you to clear or remove the last number inserted. The purpose of this calculator is to mimic a simple real-world object that many people are familiar with so you can learn RSpec by testing something you already know how to use.
 
-## Using the Calculator
+### Using the Calculator
 
 First you create a Calculator object:
 
@@ -58,7 +64,7 @@ calc.nums # => [3, 5]
 
 You can see that `calc.nums` does not change. The contents are protected.
 
-## Running the Calculator
+### Running the Calculator
 
 There is some code commented out at the bottom of the file. This is a quick and dirty example of how to use the calculator without needing to open the README file.
 
@@ -100,7 +106,7 @@ calc.nums
 # => []
 ```
 
-## Running the Calculator Tests
+### Running the Calculator Tests
 
 First, you will need to install RSpec. This requires RubyGems.
 
@@ -138,7 +144,7 @@ Randomized with seed 21811
 
 The test run order is randomized to help you spot any potential problems with your code or your test suite.
 
-## Writing More Calculator Tests
+### Writing More Calculator Tests
 
 The `calculator_spec.rb` file has a few contexts with no tests in them. You should write some! Here are some helpful resources:
 
@@ -152,7 +158,7 @@ Some things to keep in mind:
 * Variables with an `@` symbol in front of them are instance variables and can be used throughout your file.
 * This test file is intentionally not perfect. What tests are missing for `#push` and `#initialize`? Is there functionality missing from the Calculator itself? Can the tests be refactored?
 
-### Anatomy of a test
+#### Anatomy of a test
 
 Here is a simple test for addition (not in `calculator_spec.rb`):
 
@@ -209,6 +215,6 @@ expect(calc.add).to be(10)
 
 The former is a little easier to read as a beginner, and the latter is a bit shorter. Both are fine!
 
-## Adding New Functionality to the Calculator
+### Adding New Functionality to the Calculator
 
 Try adding a divide function, returning an error if someone tries to add a string to the calculator, rounding, or other advanced functionality. Write your tests before you write your code!
