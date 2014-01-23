@@ -6,7 +6,9 @@ This is a simple Ruby calculator that has addition, subtraction, and multiplicat
 
 There is some code commented out at the bottom of the file. This is driver code, and should return `true` for everything you see if you run it.
 
-To play with the calculator, load up irb (` $ irb `) and then:
+Un-comment the codes (lines 36-45) and run with `ruby calculator.rb`.
+
+If you want to play with the calculator interactively, make sure lines 36-45 are commented out. Then, load up irb (` $ irb `). Inside of irb:
 
 ```ruby
 load 'calculator.rb'
@@ -89,4 +91,4 @@ Some things to keep in mind:
 
 ## Adding New Functionality to the Calculator
 
-Try added a divide function, returning an error if someone tries to add a string to the calculator, rounding, or other advanced functionality. Write your tests before you write your code!
+Try adding a divide function, returning an error if someone tries to add a string to the calculator, rounding, or other advanced functionality. Write your tests before you write your code!
