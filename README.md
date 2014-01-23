@@ -4,6 +4,51 @@ This is a simple Ruby calculator that has addition, subtraction, and multiplicat
 
 ## Using the Calculator
 
+First you create a Calculator object:
+
+```ruby
+calc = Calculator.new
+```
+
+Then, you add numbers to your calculator with `push`:
+
+```ruby
+calc.push(46)
+calc.push(2)
+```
+
+You can add as many or as few numbers as you want to your calculator.
+
+After you've added the numbers you want into your calculator, you can do math:
+
+```ruby
+calc.add # => 48
+calc.multiply # => 92
+calc.subtract # => 44
+```
+
+If you want to remove the last number you added:
+
+```ruby
+calc.remove_last # => [46]
+```
+
+Or, when you're ready to start over, you can:
+
+```ruby
+calc.clear # => []
+```
+
+At any point, you can check the contents of your calculator with:
+
+```ruby
+calc.nums # => [46]
+```
+
+Tada! You have a calculator.
+
+## Running the Calculator
+
 There is some code commented out at the bottom of the file. This is driver code, and should return `true` for everything you see if you run it.
 
 Un-comment the codes (lines 36-45) and run with `ruby calculator.rb`.
