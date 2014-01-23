@@ -56,7 +56,7 @@ rspec calculator_spec.rb
 This will return:
 
 ```
-Caculator
+Calculator
   #multiply
     works
   #push
