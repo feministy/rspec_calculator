@@ -152,6 +152,63 @@ Some things to keep in mind:
 * Variables with an `@` symbol in front of them are instance variables and can be used throughout your file.
 * This test file is intentionally not perfect. What tests are missing for `#push` and `#initialize`? Is there functionality missing from the Calculator itself? Can the tests be refactored?
 
+### Anatomy of a test
+
+Here is a simple test for addition (not in `calculator_spec.rb`):
+
+```ruby
+it 'returns the sum of all numbers' do
+  calc = Calculator.new
+  calc.push(2)
+  calc.push(5)
+  calc.push(3)
+  total = calc.add
+  expect(total).to be(10)
+end
+```
+
+Now lets break this down:
+
+```ruby
+# This is the description of what our test is actually testing for.
+it 'returns the sum of all numbers' do
+
+  # We have to make a new Calculator object
+  calc = Calculator.new
+  
+  # And put some numbers into our Calculator
+  calc.push(2)
+  calc.push(5)
+  calc.push(3)
+  
+  # Now that our calculator has numbers,
+  # we can add them together to get a total
+  # using the add method.
+  total = calc.add
+  
+  # This is our assertion.
+  # Read in plain English: We expect the total to be 10.
+  # Our test will pass if the total is 10.
+  # Our test will fail is the total is not 10 (the Integer).
+  expect(total).to be(10)
+end
+```
+
+It's not necessary to do:
+
+```ruby
+total = calc.add
+expect(total).to be(10)
+```
+
+You could instead do:
+
+```ruby
+expect(calc.add).to be(10)
+```
+
+The former is a little easier to read as a beginner, and the latter is a bit shorter. Both are fine!
+
 ## Adding New Functionality to the Calculator
 
 Try adding a divide function, returning an error if someone tries to add a string to the calculator, rounding, or other advanced functionality. Write your tests before you write your code!
