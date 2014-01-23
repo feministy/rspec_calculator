@@ -1,7 +1,7 @@
 require 'rspec'
 require_relative 'calculator.rb'
 
-describe 'Caculator' do
+describe 'Calculator' do
   before do
     @calc = Calculator.new
   end
