@@ -45,15 +45,24 @@ At any point, you can check the contents of your calculator with:
 calc.nums # => [46]
 ```
 
-Tada! You have a calculator.
+**This calculator is not destructive**. So if you do:
+
+```ruby
+calc = Calculator.new
+calc.push(3)
+calc.push(5)
+calc.nums # => [3, 5]
+calc.add # => 8
+calc.nums # => [3, 5]
+```
+
+You can see that `calc.nums` does not change. The contents are protected.
 
 ## Running the Calculator
 
-There is some code commented out at the bottom of the file. This is driver code, and should return `true` for everything you see if you run it.
+There is some code commented out at the bottom of the file. This is a quick and dirty example of how to use the calculator without needing to open the README file.
 
-Un-comment the codes (lines 36-45) and run with `ruby calculator.rb`.
-
-If you want to play with the calculator interactively, make sure lines 36-45 are commented out. Then, load up irb (` $ irb `). Inside of irb:
+If you want to play with the calculator interactively: load up irb (` $ irb `). Inside of irb:
 
 ```ruby
 load 'calculator.rb'
@@ -69,6 +78,9 @@ calc.nums
 calc.add
 # => 6
 
+calc.nums
+# => [1, 2, 3]
+
 calc.multiply
 # => 6
 
@@ -78,7 +90,13 @@ calc.subtract
 calc.remove_last
 # => [1, 2]
 
+calc.nums
+# => [1, 2]
+
 calc.clear
+# => []
+
+calc.nums
 # => []
 ```
 
