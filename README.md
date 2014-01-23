@@ -8,6 +8,8 @@ Currently this repo covers Ruby and testing with RSpec; more to follow.
 
 This is a simple Ruby calculator that has addition, subtraction, and multiplication calculating functionalities. It also allows you to clear or remove the last number inserted. The purpose of this calculator is to mimic a simple real-world object that many people are familiar with so you can learn RSpec by testing something you already know how to use.
 
+**These instructions assume you know how to read, write, and run Ruby.**
+
 ### Using the Calculator
 
 First you create a Calculator object:
