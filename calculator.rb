@@ -27,21 +27,3 @@ class Calculator
     @nums
   end
 end
-
-
-# ============================
-
-# driver code
-
-# calc = Calculator.new
-# calc.push(3)
-# calc.push(3)
-# calc.push(2)
-
-# puts calc.multiply == 18
-# puts calc.add == 8
-# puts calc.subtract == -2
-# puts calc.remove_last == [3, 3]
-# puts calc.clear == []
-
-# ============================
