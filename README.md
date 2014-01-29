@@ -1,3 +1,5 @@
 # Intro to Unit Testing: Ruby with RSpec
 
-This is a sad, sad, empty readme.
+To follow along with the tutorial, visit [http://feministy.github.io/testing](feministy.github.io/testing).
+
+Each branch covers a specific section of the tutorial.
