@@ -41,20 +41,4 @@ describe 'Calculator' do
       expect(@calc.multiply). to eql(24)
     end
   end
-
-  context '#add' do
-    # todo
-  end
-
-  context '#subtract' do
-    # todo
-  end
-
-  context '#clear' do
-    # todo
-  end
-
-  context '#remove_last' do
-    # todo
-  end
 end
